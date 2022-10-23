@@ -1,7 +1,10 @@
 {
-  "name": "test",
+  "name": "nck-payment",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "main": "dist/nck-payment",
+  "source": "src/nck-payment",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
@@ -11,10 +14,16 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "microbundle",
+    "dev": "microbundle watch",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "exports": {
+    "require": "./dist/nck-payment.cjs",
+    "default": "./dist/nck-payment.modern.js"
+  },
+  "types": "./dist/index.d.ts",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -29,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.1"
   }
 }
