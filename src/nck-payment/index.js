@@ -1,4 +1,4 @@
 
-export {default as apple} from './Apple/index.js';
-export { default as google } from './Google/index.js';
+export {default as Apple} from './Apple/index.js';
+export { default as Google } from './Google/index.js';
 
